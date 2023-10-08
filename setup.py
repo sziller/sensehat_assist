@@ -5,7 +5,7 @@ from setuptools import setup
 '''
 setup function to be run when creating packages for Organica
 command to be typed in:
-python setup.py sdist
+python setup.py sdist bdist_wheel
 '''
 
 setup(
