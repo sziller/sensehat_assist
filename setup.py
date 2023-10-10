@@ -3,9 +3,11 @@
 from setuptools import setup
 
 '''
-setup function to be run when creating packages for Organica
+setup function to be run when creating packages.
 command to be typed in:
-python setup.py sdist bdist_wheel
+python3 setup.py sdist bdist_wheel
+python3 setup.py sdist sdist
+python3 setup.py sdist sdist bdist_wheel
 '''
 
 setup(
