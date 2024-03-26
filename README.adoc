@@ -1,5 +1,5 @@
 == sensehat_assist
-RaspberryPi mounted SenseHat: helpers, assistance, general code
+RaspberryPi mounted SenseHat: helpers, assistance, general code, exceptions.
 
 === Necessary prerequisites
 In order to run code, related to SenseHat, you'll:
