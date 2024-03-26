@@ -29,26 +29,27 @@ enter the following to uninstall it:
  sudo apt-get remove python-sense-emu python3-sense-emu sense-emu-tools
 
 Also, for Ubuntu, the Emulator will not run due to numpy related errors. Correct these as shown on this
-git - page.:
+git - page.: https://github.com/astro-pi/python-sense-emu/pull/36/commits/6f0faa6a42ea60b88a4d617b1b6cf34a47768944
 
- https://github.com/astro-pi/python-sense-emu/pull/36/commits/6f0faa6a42ea60b88a4d617b1b6cf34a47768944
+In short, you'll have to correct 3 python files of the emulator software:
 
-In short, you'll have to correct 3 python files:
-`humidity.py`
+* `humidity.py`
 ----
   -      self._humidities = np.full((10,), self._humidity, dtype=np.float)
   -      self._temperatures = np.full((31,), self._temperature, dtype=np.float)
   +      self._humidities = np.full((10,), self._humidity, dtype=float)
   +      self._temperatures = np.full((31,), self._temperature, dtype=float)
 ----
-`pressure.py`
+
+* `pressure.py`
 ----
   -  self._pressures = np.full((25,), self._pressure, dtype=np.float)
   -  self._temperatures = np.full((25,), self._temperature, dtype=np.float)
   +  self._pressures = np.full((25,), self._pressure, dtype=float)
   +  self._temperatures = np.full((25,), self._temperature, dtype=float)
 ----
-`imu.py`
+
+* `imu.py`
 ----
   -      self._gyros = np.full((10, 3), self._gyro, dtype=np.float)
   -      self._accels = np.full((10, 3), self._accel, dtype=np.float)
